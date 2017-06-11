@@ -22,15 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-AF-tG4">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-AF-tG4">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bbj-AF-tG4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T4D-w5-zlj"/>
-                            <constraint firstItem="bbj-AF-tG4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cHA-z3-8c8"/>
+                            <constraint firstItem="bbj-AF-tG4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="cHA-z3-8c8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bbj-AF-tG4" secondAttribute="trailing" id="jEg-Pq-shT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bbj-AF-tG4" secondAttribute="bottom" id="t4u-eN-wzB"/>
                         </constraints>
@@ -46,11 +46,12 @@
                     <connections>
                         <outlet property="tableview" destination="bbj-AF-tG4" id="UHW-BV-znF"/>
                         <segue destination="vxx-xg-KSF" kind="show" identifier="addSegue" id="MAF-jv-mVO"/>
+                        <segue destination="RR0-zs-lLP" kind="show" identifier="selectTaskSegue" id="JjH-Si-M8L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="63"/>
+            <point key="canvasLocation" x="973.60000000000002" y="72.413793103448285"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="bzG-0y-IQT">
@@ -102,9 +103,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hof-5i-wIK" secondAttribute="trailing" constant="147" id="aJD-7p-ZhH"/>
                             <constraint firstItem="hof-5i-wIK" firstAttribute="leading" secondItem="kfQ-Nh-ddP" secondAttribute="leadingMargin" constant="147" id="bdM-Yq-EH6"/>
                             <constraint firstItem="SHX-AE-Py4" firstAttribute="top" secondItem="k1T-RR-CCV" secondAttribute="bottom" constant="15" id="cK2-Ge-PLe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ee6-gT-Ezr" secondAttribute="trailing" constant="157" id="gwO-2k-vHG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ee6-gT-Ezr" secondAttribute="trailing" constant="156.5" id="gwO-2k-vHG"/>
                             <constraint firstItem="Ee6-gT-Ezr" firstAttribute="top" secondItem="hof-5i-wIK" secondAttribute="bottom" constant="25" id="hRH-tl-1gW"/>
-                            <constraint firstItem="Ee6-gT-Ezr" firstAttribute="leading" secondItem="kfQ-Nh-ddP" secondAttribute="leadingMargin" constant="156" id="mgZ-zu-nDJ"/>
+                            <constraint firstItem="Ee6-gT-Ezr" firstAttribute="leading" secondItem="kfQ-Nh-ddP" secondAttribute="leadingMargin" constant="156.5" id="mgZ-zu-nDJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fwd-c1-8N4" secondAttribute="trailing" constant="130" id="mwa-Ed-Lts"/>
                             <constraint firstItem="hof-5i-wIK" firstAttribute="top" secondItem="Fwd-c1-8N4" secondAttribute="bottom" constant="10" id="opg-QQ-46c"/>
                             <constraint firstItem="SHX-AE-Py4" firstAttribute="leading" secondItem="kfQ-Nh-ddP" secondAttribute="leadingMargin" constant="144" id="pil-1A-aqg"/>
@@ -137,7 +138,62 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dr-BV-jQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15" y="63"/>
+            <point key="canvasLocation" x="233" y="63"/>
+        </scene>
+        <!--Complete Task View Controller-->
+        <scene sceneID="iOM-WQ-cnW">
+            <objects>
+                <viewController id="RR0-zs-lLP" customClass="CompleteTaskViewController" customModule="doit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DHm-hf-g7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3J-V4-d4l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rt1-fn-QWd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-ra-fgw">
+                                <rect key="frame" x="166" y="84" width="43" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JSc-Fz-SEF">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="50"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8I-yg-DUB">
+                                <rect key="frame" x="154" y="137" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="RR0-zs-lLP" eventType="touchUpInside" id="7wN-do-VFq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jB-L6-FXx">
+                                <rect key="frame" x="166" y="93.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WYZ-ra-fgw" firstAttribute="centerX" secondItem="rt1-fn-QWd" secondAttribute="centerX" id="0Ff-PF-UCx"/>
+                            <constraint firstItem="g8I-yg-DUB" firstAttribute="top" secondItem="WYZ-ra-fgw" secondAttribute="bottom" constant="3" id="Dhs-O6-Zmg"/>
+                            <constraint firstItem="WYZ-ra-fgw" firstAttribute="top" secondItem="DHm-hf-g7w" secondAttribute="bottom" constant="20" id="L6s-Ha-Gcq"/>
+                            <constraint firstItem="WYZ-ra-fgw" firstAttribute="leading" secondItem="rt1-fn-QWd" secondAttribute="leading" constant="166" id="Qw0-H4-QWf"/>
+                            <constraint firstItem="g8I-yg-DUB" firstAttribute="top" secondItem="4jB-L6-FXx" secondAttribute="bottom" constant="23" id="ZmY-w4-i9D"/>
+                            <constraint firstItem="O3J-V4-d4l" firstAttribute="top" secondItem="g8I-yg-DUB" secondAttribute="bottom" constant="500" id="rSG-EC-hOx"/>
+                            <constraint firstItem="WYZ-ra-fgw" firstAttribute="leading" secondItem="4jB-L6-FXx" secondAttribute="leading" id="tmJ-Od-g6j"/>
+                            <constraint firstItem="g8I-yg-DUB" firstAttribute="centerX" secondItem="rt1-fn-QWd" secondAttribute="centerX" id="yq7-Sh-JcV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="completeTapped" destination="g8I-yg-DUB" id="euR-EH-Erq"/>
+                        <outlet property="taskLabel" destination="4jB-L6-FXx" id="BSr-9H-MyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxp-qL-7pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="849"/>
         </scene>
     </scenes>
 </document>
