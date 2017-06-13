@@ -10,26 +10,28 @@ import UIKit
 
 class CreateTaskViewController: UIViewController {
     @IBOutlet weak var taskNameTextField: UITextField!
-
     @IBOutlet weak var importantSwitch: UISwitch!
     
-    var previousVC = TasksViewController()
-    var tasks : [task] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
     @IBAction func addTapped(_ sender: Any) {
-        let newtask = task()
-        newtask.name = taskNameTextField.text!
-        newtask.important = importantSwitch.isOn
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let task = Task(context: context)
+        
+        task.name = taskNameTextField.text
+        task.important = importantSwitch.isOn
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    
         //Create task from outlet
         
-        previousVC.tasks.append(newtask)
-        previousVC.tableview.reloadData()
         navigationController!.popViewController(animated: true)
-        //Add task to the list after button is pushed
+        //Pop Back
         
     
     }

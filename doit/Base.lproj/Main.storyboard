@@ -46,12 +46,12 @@
                     <connections>
                         <outlet property="tableview" destination="bbj-AF-tG4" id="UHW-BV-znF"/>
                         <segue destination="vxx-xg-KSF" kind="show" identifier="addSegue" id="MAF-jv-mVO"/>
-                        <segue destination="RR0-zs-lLP" kind="show" identifier="selectTaskSegue" id="JjH-Si-M8L"/>
+                        <segue destination="RR0-zs-lLP" kind="show" identifier="selectTaskSegue" id="QXg-Eh-vJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="72.413793103448285"/>
+            <point key="canvasLocation" x="1002" y="63"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="bzG-0y-IQT">
@@ -164,7 +164,7 @@
                                 <rect key="frame" x="154" y="137" width="67" height="30"/>
                                 <state key="normal" title="Complete"/>
                                 <connections>
-                                    <action selector="completeTapped:" destination="RR0-zs-lLP" eventType="touchUpInside" id="7wN-do-VFq"/>
+                                    <action selector="completeTapped:" destination="RR0-zs-lLP" eventType="touchUpInside" id="wOh-nm-aai"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jB-L6-FXx">
@@ -181,13 +181,12 @@
                             <constraint firstItem="WYZ-ra-fgw" firstAttribute="top" secondItem="DHm-hf-g7w" secondAttribute="bottom" constant="20" id="L6s-Ha-Gcq"/>
                             <constraint firstItem="WYZ-ra-fgw" firstAttribute="leading" secondItem="rt1-fn-QWd" secondAttribute="leading" constant="166" id="Qw0-H4-QWf"/>
                             <constraint firstItem="g8I-yg-DUB" firstAttribute="top" secondItem="4jB-L6-FXx" secondAttribute="bottom" constant="23" id="ZmY-w4-i9D"/>
+                            <constraint firstItem="4jB-L6-FXx" firstAttribute="centerX" secondItem="rt1-fn-QWd" secondAttribute="centerX" id="bf4-kh-HpQ"/>
                             <constraint firstItem="O3J-V4-d4l" firstAttribute="top" secondItem="g8I-yg-DUB" secondAttribute="bottom" constant="500" id="rSG-EC-hOx"/>
-                            <constraint firstItem="WYZ-ra-fgw" firstAttribute="leading" secondItem="4jB-L6-FXx" secondAttribute="leading" id="tmJ-Od-g6j"/>
                             <constraint firstItem="g8I-yg-DUB" firstAttribute="centerX" secondItem="rt1-fn-QWd" secondAttribute="centerX" id="yq7-Sh-JcV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="completeTapped" destination="g8I-yg-DUB" id="euR-EH-Erq"/>
                         <outlet property="taskLabel" destination="4jB-L6-FXx" id="BSr-9H-MyN"/>
                     </connections>
                 </viewController>
