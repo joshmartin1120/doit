@@ -25,14 +25,15 @@ class CompleteTaskViewController: UIViewController {
             taskLabel.text = task!.name!
         }
     }
-        @IBAction func completeTapped(_ sender: Any) {
-            func completeTapped(_ sender: AnyObject) {
-                let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                context.delete(task!)
-                (UIApplication.shared.delegate as! AppDelegate).saveContext()
-                    
-                navigationController!.popViewController(animated: true)
-                }
+    
+    @IBAction func completeTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(task!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+        navigationController!.popViewController(animated: true)
+    }
 
-}
-}
+    
+    
+} // End of class
